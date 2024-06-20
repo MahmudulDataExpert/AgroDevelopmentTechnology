@@ -1,0 +1,2882 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Crops Dieases</title>
+    <link rel="shortcut icon" href="./Crops-Diseases/default-img/logo3.png" type="image/x-icon">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+    /* Google Font CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/*============Top header============*/
+
+.double_header{
+  background: rgba(232, 250, 237, 0.9);
+ width: 100%;
+height: 70px;
+ display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+
+
+
+}
+
+
+.phone_email{
+ 
+display: flex;
+margin: 0 10px;
+}
+
+
+
+
+/*----Register-----*/
+.bn13 {
+  background-image: linear-gradient(45deg, #00af6c 0%, #00eb91   51%, #00b46f  100%);
+  color: rgb(255, 255, 255);
+  padding: 0.5em 1.2em;
+  margin: 0 10px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.4s ease;
+  border-radius: 5px;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  background-size: 200% auto;
+}
+
+.bn13:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+  transform: scale(0.90);
+}
+
+.bn13:active {
+  transform: scale(0.95);
+}
+@keyframes bn13bouncy {
+  0% {
+    top: 0em;
+  }
+  40% {
+    top: 0em;
+  }
+  43% {
+    top: -0.9em;
+  }
+  46% {
+    top: 0em;
+  }
+  48% {
+    top: -0.4em;
+  }
+  50% {
+    top: 0em;
+  }
+  100% {
+    top: 0em;
+  }
+}
+@media (max-width: 824px){
+    .bn13{
+      padding: 0.9em 2em;
+    margin: 0px;
+    font-size: 13px;
+    font-weight: 300;
+       }
+       .phone_email{
+           display: none;
+     
+       }
+      }
+
+  
+
+/*----Social Meadi----*/
+
+.media-social{
+  display: flex;
+}
+.media-social a{
+  height: 30px;
+  width: 30px;
+  margin: 0 8px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 32px;
+  color: #fff;
+  font-size: 17px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+ .media-social a:nth-child(1){
+  background: #4267B2;
+}
+ .media-social a:nth-child(1):hover{
+  color: #4267B2;
+  background: #fff;
+  transform: scale(1.3);
+}
+ .media-social a:nth-child(2){
+  background: #1DA1F2;
+}
+ .media-social a:nth-child(2):hover{
+  color: #1DA1F2;
+  background: #fff;
+  transform: scale(1.3);
+}
+ .media-social a:nth-child(3){
+  background: #E1306C;
+}
+ .media-social a:nth-child(3):hover{
+  color: #E1306C;
+  background: #fff;
+  transform: scale(1.3);
+}
+.media-social a:nth-child(4){
+  background: #0077B5;
+}
+ .media-social a:nth-child(4):hover{
+  color: #0077B5;
+  background: #fff;
+  transform: scale(1.3);
+}
+.media-social a:nth-child(5){
+  background: #FF0000;
+}
+ .media-social a:nth-child(5):hover{
+  color: #FF0000;
+  background: #fff;
+  transform: scale(1.3);
+}
+
+
+
+@media (max-width: 824px){
+    .media-social a{
+      height: 30px;
+      width: 30px;
+      margin: 0 2px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 32px;
+      color: #fff;
+      font-size: 15px;
+      text-decoration: none;
+      transition: all 0.4s ease;
+    }
+  }
+
+
+/*============dowen header============*/
+header{
+  z-index: 999;
+  position: fixed;
+
+  left: 0;
+  width: 100%;
+ 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007045;
+  backdrop-filter: blur(8px);
+  padding:5px 60px;
+  transition: 0.6s;
+}
+ .logo img{
+width: 80px;
+height: 70px;
+margin-top: -40px;
+position: absolute; 
+filter: drop-shadow(10px 10px 10px  rgba(41, 40, 40, 0.5));
+cursor: pointer;
+
+}
+
+
+
+
+header .navigation{
+  position: relative;
+  line-height: 75px;
+  transition: 0.6s;
+  transition-property: line-height;
+}
+
+header.sticky .navigation{
+  line-height: 60px;
+ 
+
+}
+
+header.sticky{
+  position: fixed;
+  top: 0px;
+}
+
+header .navigation .menu{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  user-select: none;
+}
+
+.menu-item > a{
+  color: #fff;
+  font-size: 1em;
+  text-decoration: none;
+  margin: 20px;
+  padding: 25px 0;
+
+}
+
+.menu-item > a:hover{
+  color: rgb(0, 255, 106);
+  transition: 0.3s;
+}
+
+.menu-item .sub-menu{
+  position: absolute;
+  background: #292c33;
+  top: 79px;
+  line-height: 40px;
+  list-style: none;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
+  pointer-events: none;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: 0.4s;
+  transition-property: transform, opacity;
+}
+
+header.sticky .menu-item .sub-menu,
+.menu-item .mega-box{
+  top: 65px;
+}
+
+
+.menu-item:hover .sub-menu{
+  pointer-events: all;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.menu-item .sub-menu .sub-item{
+  position: relative;
+  padding: 7px 0;
+  cursor: pointer;
+  box-shadow: inset 0px -30px 5px -30px rgba(255, 255, 255, 0.2);
+}
+
+.menu-item .sub-menu .sub-item a:hover{
+  margin-left: 5px;
+  transition: all 0.4s ease-in-out;
+}
+
+
+.menu-item .sub-menu .sub-item a{
+  color: #fff;
+  font-size: 1em;
+  text-decoration: none;
+  padding: 10px 35px;
+}
+
+.menu-item .sub-menu .sub-item:hover{
+  background: #01ca6d;
+  transition: all 0.4s ease-in-out;
+}
+
+.menu-item .sub-menu .sub-item:last-child:hover{
+  border-radius: 0 0 8px 8px;
+}
+
+.menu-btn{
+  display: none;
+}
+
+
+/*----Searchbar---*/
+
+.searchBox{
+  display: flex;
+  align-items: center;
+}
+
+
+.searchToggle{
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+}
+
+
+.searchToggle i{
+  position: absolute;
+  color: #ffff;
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+
+.searchToggle i.cancel{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.searchToggle.active i.cancel{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.searchToggle.active i.search{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.searchBox{
+  position: relative;
+}
+
+.searchBox .search-field{
+  position: absolute;
+  bottom: -85px;
+  right: 5px;
+  height: 50px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 3px;
+  border-radius: 6px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.searchToggle.active ~ .search-field{
+  bottom: -74px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.search-field::before{
+  content: '';
+  position: absolute;
+  right: 14px;
+  top: -4px;
+  height: 12px;
+  width: 12px;
+  background-color: #ff9900;
+  transform: rotate(-45deg);
+  z-index: -1;
+}
+
+.search-field input{
+  height: 100%;
+  width: 100%;
+  padding: 0 45px 0 15px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #110101;
+  background-color: #ffff;
+}
+
+
+
+.search-field i{
+  position: absolute;
+  color: #b1b1b1;
+  right: 15px; 
+  font-size: 22px;
+  cursor: pointer;
+
+}
+
+/*---Megabox-----*/
+
+.menu-item:hover .mega-box{
+  opacity: 1;
+  top: 79px;
+  visibility: visible;
+  position: absolute;
+  pointer-events: all;
+
+}
+
+
+
+.mega-box{
+  position: absolute;
+
+  width: 80%;
+
+  opacity: 0;
+  visibility: hidden;
+
+
+
+
+
+
+}
+.mega-box .content{
+  background: #242526;
+  padding: 10px 10px;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+  border-radius: 0 0 8px 8px;
+}
+.mega-box .content .row{
+  width: calc(25% - 00px);
+  line-height: 30px;
+
+}
+.content .row img{
+  width: 80%;
+  height: 90%;
+  border-radius: 50%;
+  object-fit: cover;
+
+
+}
+.content .row p{
+  color: rgb(0, 255, 106);
+  font-size: 20px;
+  font-weight: 500;
+  
+}
+.content .row .mega-links{
+  margin-left: auto;
+  border-left: 1px solid rgba(255,255,255,0.09);
+}
+.row .mega-links li{
+  padding: 0 20px;
+  list-style: none;
+
+ 
+
+}
+.row .mega-links li a{
+
+  
+  color: #ffffff;
+  font-size: 17px;
+  display: block;
+  text-decoration: none;
+}
+.row .mega-links li a:hover{
+  color: rgb(0, 255, 106);
+}
+
+
+
+@media (max-width: 1200px){
+  header .navigation .menu{
+    position: fixed;
+    display: block;
+    background: #23252b;
+    min-width: 350px;
+    height: 100vh;
+    top: 0;
+    right: -100%;
+    padding: 90px 50px;
+    visibility: hidden;
+    overflow-y: auto;
+    transition: 0.5s;
+    transition-property: right, visibility;
+  }
+
+  header.sticky .navigation{
+    line-height: 75px;
+  }
+
+  header .navigation .menu.active{
+    right: 0;
+    visibility: visible;
+  }
+
+  .menu-item{
+    position: relative;
+  }
+
+  .menu-item .sub-menu{
+    opacity: 1;
+    position: relative;
+    top: 0;
+    transform: translateX(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    display: none;
+  }
+
+.search-field{
+ left: -19px;
+}
+
+  header.sticky .menu-item .sub-menu{
+    top: 0;
+  }
+
+  .menu-item:hover .sub-menu{
+    transform: translateX(10px);
+  }
+
+  .menu-item .sub-menu .sub-item{
+    box-shadow: none;
+  }
+
+  .menu-item .sub-menu .sub-item:hover{
+    background: none;
+  }
+
+  .menu-item .sub-menu .sub-item a:hover{
+    color: rgb(0, 255, 106);
+    transition: 0.3s;
+  }
+
+
+
+  .close-btn{
+    position: absolute;
+    background: url(./Crops-Diseases/default-img/close.png)no-repeat;
+    width: 40px;
+    height: 40px;
+    background-size: 25px;
+    background-position: center;
+    top: 0;
+    left: 0;
+    margin: 25px;
+    cursor: pointer;
+  }
+
+  .menu-btn{
+    background: url(./Crops-Diseases/default-img/menu.png)no-repeat;
+    width: 40px;
+    height: 40px;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+    display: block;
+  }
+
+  header{
+    padding: 15px 20px;
+  }
+
+  header.sticky{
+    padding: 10px 20px;
+  }
+  #showMega:checked ~ .mega-box{
+    max-height: 100%;
+  }
+  .mega-box{
+
+    top: 65px;
+    opacity: 1;
+    visibility: visible;
+    padding: 0 20px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .mega-box .content{
+    box-shadow: none;
+    flex-direction: column;
+    padding: 20px 20px 0 20px;
+  }
+  .mega-box .content .row{
+    width: 100%;
+    margin-bottom: 15px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .mega-box .content .row:nth-child(1),
+  .mega-box .content .row:nth-child(2){
+    border-top: 0px;
+  }
+  
+  .row .mega-links li{
+    margin: 0;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+/*----dieases----*/
+
+::selection{
+  background:#00c26b;
+  color: #fff;
+}
+.cover{
+ 
+
+  padding: 150px 10px;
+
+}
+
+.crops_list{
+  display: flex;
+
+  justify-content: space-between;
+}
+.crops_list .list{
+  display: flex;
+  flex-direction: column;
+  width: 17%;
+ border-radius: 0px 50px 50px 0px;
+  position: relative;
+  background-color: #242526;
+}
+.crops_list .list label{
+  height: 60px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 60px;
+
+  cursor: pointer;
+  padding-left: 25px;
+  transition: all 0.5s ease;
+  color: rgb(255, 255, 255);
+  z-index: 12;
+}
+
+#home:checked ~ .list label.Grain,
+#Fiber:checked ~ .list label.Fiber,
+#Pulse:checked ~ .list label.Pulse,
+#Oil:checked ~ .list label.Oil,
+#Cash:checked ~ .list label.Cash,
+#Vegetable:checked ~ .list label.Vegetable,
+#Fruit:checked ~ .list label.Fruit,
+#Flower:checked ~ .list label.Flower,
+#Spice:checked ~ .list label.Spice,
+#Spring:checked ~ .list label.Spring{
+  color: #fff;
+}
+.crops_list .list label:hover{
+  color: rgb(0, 255, 170);
+}
+.crops_list .slider{
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 0px 50px 50px 0px;
+  height: 60px;
+  width: 100%;
+  background: rgb(12, 214, 130);
+  transition: all 0.4s ease;
+}
+#Grain:checked ~ .list .slider{
+  top: 0;
+}
+#Fiber:checked ~ .list .slider{
+  top: 60px;
+}
+#Pulse:checked ~ .list .slider{
+  top: 120px;
+}
+#Oil:checked ~ .list .slider{
+  top: 180px;
+}
+#Cash:checked ~ .list .slider{
+  top: 240px;
+}
+#Vegetable:checked ~ .list .slider{
+  top: 300px;
+}
+#Fruit:checked ~ .list .slider{
+  top: 360px;
+}
+#Flower:checked ~ .list .slider{
+  top: 420px;
+}
+#Spice:checked ~ .list .slider{
+  top: 480px;
+}
+#Spring:checked ~ .list .slider{
+  top: 540px;
+}
+
+
+
+
+
+
+ .text-content{
+  width: 83%;
+
+}
+.crops_list .text{
+  display: none;
+}
+
+
+.crops_list .text-content .Grain{
+  display: block;
+}
+#Grain:checked ~ .text-content .Grain,
+#Fiber:checked ~ .text-content .Fiber,
+#Pulse:checked ~ .text-content .Pulse,
+#Oil:checked ~ .text-content .Oil,
+#Cash:checked ~ .text-content .Cash,
+#Vegetable:checked ~ .text-content .Vegetable,
+#Fruit:checked ~ .text-content .Fruit,
+#Flower:checked ~ .text-content .Flower,
+#Spice:checked ~ .text-content .Spice,
+#Spring:checked ~ .text-content .Spring{
+  display: block;
+}
+#Fiber:checked ~ .text-content .Grain,
+#Pulse:checked ~ .text-content .Grain,
+#Oil:checked ~ .text-content .Grain,
+#Cash:checked ~ .text-content .Grain,
+#Vegetable:checked ~ .text-content .Grain,
+#Fruit:checked ~ .text-content .Grain,
+#Flower:checked ~ .text-content .Grain,
+#Spice:checked ~ .text-content .Grain,
+#Spring:checked ~ .text-content .Grain{
+  display: none;
+}
+.crops_list input{
+  display: none;
+}
+
+
+
+/*----Grain*/
+
+
+
+
+
+.gcrow{
+  
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 40px 0px;
+
+}
+
+
+
+.part{
+  position: relative;
+
+  display: flex;
+  
+}
+ .twopart{
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+
+
+ }
+
+.part p{
+  color:rgba(43, 43, 54, 0.801);
+  font-size: 13px;
+  font-weight: 500;
+
+text-align: center;
+
+}
+
+
+.gcimage{
+	background: #000000;
+	position: relative;
+	flex: 1;
+width: 320px;
+height: 200px;
+	margin: 20px;
+	overflow: hidden;
+	border-radius: 5px;
+
+}
+
+
+
+.gcimage img{
+	width: 100%;
+  height: 100%;
+  opacity: 1;
+	position: relative;
+	vertical-align: top;
+	transition: 0.6s;
+	transition-property: opacity;
+  transition: all 0.3s ease-in-out;
+    background-repeat: no-repeat;
+}
+
+.gcimage:hover img{
+	opacity: 0.7;
+  transform: scale(1.05);
+}
+
+.gcimage .gcdetails{
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: rgb(255, 255, 255);  /*rgb(0, 255, 64);*/
+	width: 100%;
+	height: 100%;
+}
+
+.gcimage .gcdetails h2{
+	text-align: center;
+	font-size: 30px;
+	text-transform: uppercase;
+	font-weight: 300;
+	margin-top: 100px;
+	transition: 0.4s;
+	transition-property: transform;
+    text-shadow: 2px 2px 4px #000000
+}
+
+.gcimage .gcdetails h2 span{
+	font-weight: 900;
+}
+
+.gcimage:hover .gcdetails h2{
+	transform: translateY(-30px);
+}
+
+
+
+
+
+
+.gcmore{
+	position: absolute;
+
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	bottom: -66px;
+	transition: 0.6s;
+	transition-property: bottom;
+}
+
+.gcimage:hover .gcmore{
+	bottom: 0;
+}
+
+.gcmore .gcread-more{
+	color: rgb(0, 255, 64);
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 400;
+
+
+  background-image: linear-gradient(-180deg, #00c26b, #008f4f);
+  border-radius: 5px;
+
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  
+  height: 40px;
+  line-height: 40px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 10px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  z-index: 9;
+  border: 0;
+}
+
+.gcread-more:hover {
+  background: #df6819;
+}
+
+
+
+
+
+
+.gcmore .gcicon-links i{
+	color: rgb(255, 255, 255);
+	font-size: 20px;
+}
+
+.gcmore .gcicon-links i:hover{
+	color: rgba(255, 51, 0, 0.904);
+	font-size: 25px;
+	
+}
+
+.gcmore .gcicon-links a:not(:last-child) i{
+	margin-right: 20px;
+}
+
+
+/* Responsive CSS */
+
+@media (max-width: 1080px){
+	.gcimage{
+		flex: 100%;
+		max-width: 280px;
+    height: 250px;
+    
+	}
+  .gcimage .gcdetails h2{
+	text-align: center;
+	font-size: 30px;
+
+
+
+
+}
+
+.gcimage .gcdetails h2 span{
+	font-weight: 900;
+}
+
+.crops_list .list{
+
+width: 20%;
+
+}
+
+.text-content{
+  width: 80%;
+
+}
+
+
+}
+
+@media (max-width: 980px){
+	.gcrow{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	row-gap: 200px;
+ 
+}
+  .gcimage{
+		flex: 100%;
+    max-width: 500px;
+    height:300px;
+     
+	}
+
+  .gcimage img{
+    min-width: 500px;
+    height:300px;
+    object-fit: cover; 
+}
+
+
+
+  .gcimage .gcdetails h2{
+	text-align: center;
+	font-size: 40px;
+}
+
+.gcimage .gcdetails h2 span{
+	font-weight: 900;
+}
+  
+  
+  
+  .gcimage .gcdetails p{
+		font-size: 16px;
+	}
+
+	.gcmore .gcread-more, .gcmore .gcicon-links a i{
+		font-size: 18px;
+	}
+
+  .crops_list .list{
+
+  width: 20%;
+
+}
+.text-content{
+  width: 80%;
+
+}
+}
+
+@media (max-width: 872px){
+  .crops_list .list{
+
+width: 30%;
+
+}
+
+.text-content{
+  width: 70%;
+
+}
+}
+
+@media (max-width: 600px){
+  .crops_list .list{
+
+width: 30%;
+
+}
+
+.text-content{
+  width: 70%;
+
+}
+
+.gcimage{
+
+width: 220px;
+height: 120px;
+
+
+
+}
+.twopart {
+
+    width: 280px;
+
+}
+.crops_list .list label{
+  font-size: 12px;
+}
+}
+
+
+
+
+
+
+
+/*----footer-----*/
+footer{
+  position: relative;
+  background: #007045;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  
+}
+footer:hover{
+  background: linear-gradient(to right, #005c39 0%, #005f33 100%);
+}
+
+footer::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 100px;
+  height: 1px;
+  width: 100%;
+  background: #AFAFB6;
+}
+footer .content{
+  max-width: 100%;
+  margin: auto;
+  padding: 30px 40px 40px 40px;
+}
+footer .content .top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.content .top .logo-details{
+  color: #fff;
+  font-size: 30px;
+}
+.content .top .media-icons{
+  display: flex;
+}
+.content .top .media-icons a{
+  height: 40px;
+  width: 40px;
+  margin: 0 8px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  font-size: 17px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+.top .media-icons a:nth-child(1){
+  background: #4267B2;
+}
+.top .media-icons a:nth-child(1):hover{
+  color: #4267B2;
+  background: #fff;
+}
+.top .media-icons a:nth-child(2){
+  background: #1DA1F2;
+}
+.top .media-icons a:nth-child(2):hover{
+  color: #1DA1F2;
+  background: #fff;
+}
+.top .media-icons a:nth-child(3){
+  background: #E1306C;
+}
+.top .media-icons a:nth-child(3):hover{
+  color: #E1306C;
+  background: #fff;
+}
+.top .media-icons a:nth-child(4){
+  background: #0077B5;
+}
+.top .media-icons a:nth-child(4):hover{
+  color: #0077B5;
+  background: #fff;
+}
+.top .media-icons a:nth-child(5){
+  background: #FF0000;
+}
+.top .media-icons a:nth-child(5):hover{
+  color: #FF0000;
+  background: #fff;
+}
+footer .content .link-boxes{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .content .link-boxes .box{
+  width: calc(100% / 5 - 10px);
+}
+.content .link-boxes .box .link_name{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  position: relative;
+}
+.link-boxes .box .link_name::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 35px;
+  background: #fff;
+}
+.content .link-boxes .box li{
+  margin: 6px 0;
+  list-style: none;
+}
+.content .link-boxes .box li a{
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: all 0.4s ease
+}
+.content .link-boxes .box li a:hover{
+  opacity: 1;
+  text-decoration: underline;
+}
+.content .link-boxes .input-box{
+  margin-right: 55px;
+}
+.link-boxes .input-box input{
+  height: 40px;
+  width: calc(100% + 55px);
+  outline: none;
+  border: 1px solid #ffffff;
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 0 15px;
+  font-size: 15px;
+  color: #fff;
+  margin-top: 5px;
+}
+.link-boxes .input-box input::placeholder{
+  color: #353535a4;
+  font-size: 16px;
+}
+.link-boxes .input-box input[type="button"]{
+  background: #fff;
+  color: rgba(0, 0, 0, 0.37);
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 4px 0;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.input-box input[type="button"]:hover{
+  opacity: 1;
+}
+footer .bottom-details{
+  width: 100%;
+  background: #003f2c;
+}
+footer .bottom-details .bottom_text{
+  max-width: 1250px;
+  margin: auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-details .bottom_text span,
+.bottom-details .bottom_text a{
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+  opacity: 0.8;
+  text-decoration: none;
+}
+.bottom-details .bottom_text a:hover{
+  opacity: 1;
+  text-decoration: underline;
+}
+.bottom-details .bottom_text a{
+  margin-right: 10px;
+}
+@media (max-width: 900px) {
+  footer .content .link-boxes{
+    flex-wrap: wrap;
+  }
+  footer .content .link-boxes .input-box{
+    width: 40%;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 700px){
+  footer{
+    position: relative;
+  }
+  .content .top .logo-details{
+    font-size: 26px;
+  }
+  .content .top .media-icons a{
+    height: 35px;
+    width: 35px;
+    font-size: 14px;
+    line-height: 35px;
+  }
+  footer .content .link-boxes .box{
+    width: calc(100% / 3 - 10px);
+  }
+  footer .content .link-boxes .input-box{
+    width: 60%;
+  }
+  .bottom-details .bottom_text span,
+  .bottom-details .bottom_text a{
+    font-size: 12px;
+  }
+}
+@media (max-width: 520px){
+  footer::before{
+    top: 145px;
+  }
+  footer .content .top{
+    flex-direction: column;
+  }
+  .content .top .media-icons{
+    margin-top: 16px;
+  }
+  footer .content .link-boxes .box{
+    width: calc(100% / 2 - 10px);
+  }
+  footer .content .link-boxes .input-box{
+    width: 100%;
+  }
+}
+
+
+
+   </style>
+    </head>
+<body>
+
+
+<!----Top header-->
+<div class="double_header" id="top">
+  <div class="media-social">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+
+
+    <div class="phone_email">
+    <span class="phone">
+      <i class="fas fa-phone-alt"></i>
+      +98976546789
+    </span>
+    <span class="phone_email">|</span>
+    <span class="email">
+      <i class="fa fa-envelope"></i>
+         agrobd@gmail.com
+    </span>
+    </div>
+
+    <div class="log_register_buttons">
+    
+ 
+    <a href="http://product.agrodevbd.com/user/login" class="bn13">Log In\ Register</a>
+
+    </div>
+
+</div>
+
+
+ <!-----Dowen header-->
+    <header id="header">
+             <div class="logo"><img src="./Crops-Diseases/default-img/logo3.png" href="./index.html"></div>
+             
+      <div class="navigation">
+        <ul class="menu">
+          <div class="close-btn"></div>
+          <li class="menu-item"><a href="index.html">Home</a></li>
+         
+         
+          <li class="menu-item">
+              <a href="./Crops_Diseases.html" class="sub-btn">Crops Diseases <i class="fas fa-angle-down"></i></a>
+              <ul class="sub-menu">
+                <li class="sub-item"><a href="#">Grain crops</a></li>
+                  <li class="sub-item"><a href="#">Fiber crops</a></li>
+                  <li class="sub-item"><a href="#">Pulse crop</a></li>
+                  <li class="sub-item"><a href="#">Oil crops</a></li>
+                  <li class="sub-item"><a href="#">Cash crops</a></li>
+                  <li class="sub-item"><a href="#">Vegetable crops</a></li>
+                  <li class="sub-item"><a href="#">Fruit crops</a></li>
+                  <li class="sub-item"><a href="#">Flower crops</a></li>
+                  <li class="sub-item"><a href="#">Spice crops</a></li>
+                  <li class="sub-item"><a href="#">Spring crops</a></li>
+              </ul>
+
+
+
+              <!--Mega box--
+              <div class="mega-box">
+                <div class="content">
+                  <div class="row">
+                    <img src="img.jpg" alt="">
+                  </div>
+                  <div class="row">
+                    <p>Cultivated Crops</p>
+                    <ul class="mega-links">
+                      <li><a href="Grain.html">Grain crops</a></li>
+                      <li><a href="#">Fiber crops</a></li>
+                      <li><a href="#">Pulse crop</a></li>
+                      <li><a href="#">Oil crops</a></li>
+                      <li><a href="#">Cash crops</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="row">
+                    <img src="5.jpg" alt="">
+                  </div>
+                  <div class="row">
+                    <p>Other Crops</p>
+                    <ul class="mega-links">
+                      <li><a href="#">Vegetable crops</a></li>
+                      <li><a href="#">Fruit crops</a></li>
+                      <li><a href="#">Flower crops</a></li>
+                      <li><a href="#">Spice crops</a></li>
+                      <li><a href="#">Spring crops</a></li>
+                    </ul>
+                  </div>
+                  
+                </div>
+              </div>
+--->
+            </li>
+            <li class="menu-item">
+              <a class="sub-btn" href="#">Problem/Solution <i class="fas fa-angle-down"></i></a>
+              <ul class="sub-menu">
+                <li class="sub-item"><a href="./Text Message/index.html">Text Message</a></li>
+                <li class="sub-item"><a href="https://mahmuduldata.github.io/Plant-Disease-Classifier-Web-Application/?fbclid=IwAR02AuUaYmlxdixsdZTf9JGBbSYSQ3bdnoEtWjY1R7hUkyAeGTv_LHw4BhA">Image Upload</a></li>
+                <li class="sub-item"><a href="./Voice call/index.html">Voice Call</a></li>
+                <li class="sub-item"><a href="./Video Call/index.html">Video Call</a></li>
+                
+              </ul>
+            </li>
+
+            <li class="menu-item">
+              <a class="sub-btn" href="http://product.agrodevbd.com/">Buy Product</a>
+              
+            </li>
+          <li class="menu-item"><a href="./Bankloan/Bankloan.html">Bank Loan</a></li>
+           <li class="menu-item"><a href="https://product.agrodevbd.com/blog">Blog</a></li>
+          <li class="menu-item"><a href="https://product.agrodevbd.com/about">About</a></li>
+          <li class="menu-item"><a href="https://product.agrodevbd.com/contact">Contact</a></li>
+          <div class="searchBox">
+            <div class="searchToggle">
+             <i class='fa fa-close cancel'></i>
+             <i class='fa fa-search search'></i>
+            </div>
+  
+             <div class="search-field">
+                 <input type="text" placeholder="Search...">
+                 <i class='fa fa-search'></i>
+             </div>
+         </div>
+        </ul>
+      </div>
+      <div class="menu-btn"></div>
+    </header>
+
+
+
+
+  <!-----Diseases------>
+  <div class="cover">
+ 
+    <div class="crops_list">
+      <input type="radio" name="slider" checked id="Grain">
+      <input type="radio" name="slider" id="Fiber">
+      <input type="radio" name="slider" id="Pulse">
+      <input type="radio" name="slider" id="Oil">
+      <input type="radio" name="slider" id="Cash">
+      <input type="radio" name="slider" id="Vegetable">
+      <input type="radio" name="slider" id="Fruit">
+      <input type="radio" name="slider" id="Flower">
+      <input type="radio" name="slider" id="Spice">
+      <input type="radio" name="slider" id="Spring">
+      <div class="list">
+
+      <label for="Grain" class="Grain">
+        <span class="title">Grain crops</span>
+      </label>
+
+      <label for="Fiber" class="Fiber">
+        <span class="title">Fiber crops</span>
+      </label>
+
+      <label for="Pulse" class="Pulse">
+        <span class="title">Pulse crops </span>
+      </label>
+
+      <label for="Oil" class="Oil"> 
+        <span class="title">Oil crops</span>
+      </label>
+
+      <label for="Cash" class="Cash">  
+        <span class="title">Cash crops</span>
+      </label>
+
+      <label for="Vegetable" class="Vegetable">
+        <span class="title">Vegetable crops</span>
+      </label>
+
+      <label for="Fruit" class="Fruit"> 
+        <span class="title">Fruit crops</span>
+      </label>
+
+      <label for="Flower" class="Flower">
+        <span class="title">Flower crops</span>
+      </label>
+
+      <label for="Spice" class="Spice">
+        <span class="title">Spice crops</span>
+      </label>
+
+      <label for="Spring" class="Spring">
+        <span class="title">Spring crops</span>
+      </label>
+     
+      <div class="slider"></div>
+    </div>
+      <div class="text-content">
+        <div class="Grain text">
+           <!---Grain Dieases-->
+    <div class="graincrops">
+
+      <div class="gcrow">
+
+        <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Grain/paddy.jpg" alt="">
+          
+          <div class="gcdetails">
+            <h2><span>Paddy</span></h2>
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Paddy.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+              </div>
+              
+            </div>
+
+          </div> 
+           </div>
+           <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+           
+          </div>
+         
+          
+           
+          
+     
+        
+          <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Grain/wheat.jpg" alt="">
+          <div class="gcdetails">
+            <h2><span>Wheat</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Wheat.html" class="gcread-more">Read more </a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      </div>
+        
+      <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Grain/corn.jpg" alt="">
+          <div class="gcdetails">
+            <h2><span>Corn</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Corn.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      </div>
+
+      </div>
+
+      <div class="gcrow">
+        <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Grain/barley.jpg" alt="">
+          <div class="gcdetails">
+            <h2><span>Barley</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Barley.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      
+      </div>
+
+
+      <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Grain/chinese.jpg" alt="">
+          <div class="gcdetails">
+            <h2><span>Chinese</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Chinese.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      
+      </div>
+
+      <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Grain/Kaun.jpg" alt="">
+          <div class="gcdetails">
+            <h2><span>Kaun</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Kaun.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      
+      </div>
+      
+
+      </div>
+
+    </div>
+        </div>
+        <div class="Fiber text">
+                 <!---Grain Dieases-->
+    <div class="graincrops">
+
+      <div class="gcrow">
+
+        <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Fiber/jute.jpg" alt="">
+          
+          <div class="gcdetails">
+            <h2><span>Jute</span></h2>
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Jute.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+              </div>
+              
+            </div>
+
+          </div> 
+           </div>
+           <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+           
+          </div>
+   
+          <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Fiber/cotton.webp" alt="">
+          <div class="gcdetails">
+            <h2><span>Cotton</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Cotton.html" class="gcread-more">Read more </a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      </div>
+        
+     
+      
+
+      </div>
+
+    </div>
+        </div>
+        <div class="Pulse text">
+                     <!---Grain Dieases-->
+    <div class="graincrops">
+
+      <div class="gcrow">
+
+        <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Pulse/Lentils.jpg" alt="">
+          
+          <div class="gcdetails">
+            <h2><span>Lentils</span></h2>
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Lentils.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+              </div>
+              
+            </div>
+
+          </div> 
+           </div>
+           <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+           
+          </div>
+         
+          
+           
+          
+     
+        
+          <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Pulse/Chickpeas.jpg" alt="">
+          <div class="gcdetails">
+            <h2><span>Chickpeas</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Chickpeas.html" class="gcread-more">Read more </a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      </div>
+        
+      <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Pulse/Mung.jpg" alt="">
+          <div class="gcdetails">
+            <h2><span>Mung Bean</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Mung-Bean.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      </div>
+
+      </div>
+
+      <div class="gcrow">
+        <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Pulse/Mask.jpg" alt="">
+          <div class="gcdetails">
+            <h2><span>Mask</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Mask.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      
+      </div>
+ 
+
+      <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Pulse/Fellan.jpg" alt="">
+          <div class="gcdetails">
+            <h2><span>Fellan</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Fellan.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      
+      </div>
+
+      <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Pulse/Beans.jpg" alt="">
+          <div class="gcdetails">
+            <h2><span>Beans</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Beans.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      
+      </div>
+      
+
+      </div>
+
+    </div>
+    </div>
+        <div class="Oil text">
+                              <!---Grain Dieases-->
+    <div class="graincrops">
+
+      <div class="gcrow">
+
+        <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Oil/mustard.jpg" alt="">
+          
+          <div class="gcdetails">
+            <h2><span>Mustard</span></h2>
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Mustard.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+              </div>
+              
+            </div>
+
+          </div> 
+           </div>
+           <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+           
+          </div>
+         
+          
+           
+          
+     
+        
+          <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Oil/Groundnut.jpeg" alt="">
+          <div class="gcdetails">
+            <h2><span>Groundnut</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Groundnut.html" class="gcread-more">Read more </a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      </div>
+        
+      <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Oil/soybean.jpeg" alt="">
+          <div class="gcdetails">
+            <h2><span>Soybean</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Soybean.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      </div>
+
+      </div>
+
+      <div class="gcrow">
+        <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Oil/Sunflowers.jpg" alt="">
+          <div class="gcdetails">
+            <h2><span>Sunflower</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Sunflower.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      
+      </div>
+ 
+
+      <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Oil/Mole.jpg" alt="">
+          <div class="gcdetails">
+            <h2><span>Mole</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Mole.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      
+      </div>
+
+      <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Oil/Linseed.jpg" alt="">
+          <div class="gcdetails">
+            <h2><span>Linseed</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Linseed.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      
+      </div>
+      
+
+      </div>
+
+      
+
+    </div>
+    </div>
+
+
+
+
+
+        <div class="Cash text">
+          <!---Grain Dieases-->
+    <div class="graincrops">
+
+      <div class="gcrow">
+
+        <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Cash/Sugarcane.jpg" alt="">
+          
+          <div class="gcdetails">
+            <h2><span>Sugarcane</span></h2>
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Sugarcane.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+              </div>
+              
+            </div>
+
+          </div> 
+           </div>
+           <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+           
+          </div>
+         
+          
+           
+          
+     
+        
+          <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Cash/Betel Leaf.jpg" alt="">
+          <div class="gcdetails">
+            <h2><span>Betel Leaf
+            </span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Betelleaf.html" class="gcread-more">Read more </a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      </div>
+        
+      <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Cash/Sugarbeet.jpg" alt="">
+          <div class="gcdetails">
+            <h2><span>Sugarbeet</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Sugarbeet.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      </div>
+
+      </div>
+
+      <div class="gcrow">
+        <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Cash/sweet-potato.png" alt="">
+          <div class="gcdetails">
+            <h2><span>Sweet Potato</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Sweetpotato.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      
+      </div>
+ 
+
+      <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Cash/Betal.jpg" alt="">
+          <div class="gcdetails">
+            <h2><span>
+              Betel Nut</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Betelnut.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      
+      </div>
+
+      </div>
+
+    </div>
+          
+        </div>
+
+
+
+
+
+
+        <div class="Vegetable text">
+                      <!---Grain Dieases-->
+    <div class="graincrops">
+
+      <div class="gcrow">
+
+        <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Vegetable/Potato.jpg" alt="">
+          
+          <div class="gcdetails">
+            <h2><span>Potatoes</span></h2>
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Potatoes.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+              </div>
+              
+            </div>
+
+          </div> 
+           </div>
+           <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+           
+          </div>
+         
+          
+           
+          
+     
+        
+          <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Vegetable/Eggplant.png" alt="">
+          <div class="gcdetails">
+            <h2><span>Eggplant</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Eggplant.html" class="gcread-more">Read more </a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      </div>
+        
+      <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Vegetable/tomatoes.jpeg" alt="">
+          <div class="gcdetails">
+            <h2><span>Tomato</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Tomato.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      </div>
+
+      </div>
+
+      <div class="gcrow">
+        <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Vegetable/cabbage.jpeg" alt="">
+          <div class="gcdetails">
+            <h2><span>Bell Pepper</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Bell_pepper.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      
+      </div>
+ 
+
+      <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Vegetable/Cauliflower.jpg" alt="">
+          <div class="gcdetails">
+            <h2><span>Cauliflower</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Cauliflower.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      
+      </div>
+
+      <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Vegetable/Cucumber.jpg" alt="">
+          <div class="gcdetails">
+            <h2><span>Cucumber</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Cucumber.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      
+      </div>
+      
+
+      </div>
+
+    </div>
+        </div>
+        
+
+        <div class="Fruit text">
+                               <!---Grain Dieases-->
+    <div class="graincrops">
+
+      <div class="gcrow">
+
+        <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Fruit/Mango.jpg" alt="">
+          
+          <div class="gcdetails">
+            <h2><span>Mango</span></h2>
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Mango.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+              </div>
+              
+            </div>
+
+          </div> 
+           </div>
+           <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+           
+          </div>
+         
+          
+           
+          
+     
+        
+          <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Fruit/jack-fruit.png" alt="">
+          <div class="gcdetails">
+            <h2><span>Jack-Fruit</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Jack-fruit.html" class="gcread-more">Read more </a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      </div>
+        
+      <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Fruit/Lychyee.jpg" alt="">
+          <div class="gcdetails">
+            <h2><span>Lychee</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Lychee.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      </div>
+
+      </div>
+
+      <div class="gcrow">
+        <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Fruit/Coconut.jpg" alt="">
+          <div class="gcdetails">
+            <h2><span>Coconut</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Coconut.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      
+      </div>
+ 
+
+      <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Fruit/Water.png" alt="">
+          <div class="gcdetails">
+            <h2><span>Watermelon</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Watermelon.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      
+      </div>
+
+      <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Fruit/orange-tree-fruits.webp" alt="">
+          <div class="gcdetails">
+            <h2><span>Orange</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Orange.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      
+      </div>
+      
+
+      </div>
+
+    </div>
+        </div>
+
+        <div class="Flower text">
+                                        <!---Grain Dieases-->
+    <div class="graincrops">
+
+      <div class="gcrow">
+
+        <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Flower/rose.jpeg" alt="">
+          
+          <div class="gcdetails">
+            <h2><span>Rose</span></h2>
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Rose.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+              </div>
+              
+            </div>
+
+          </div> 
+           </div>
+           <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+           
+          </div>
+         
+          
+           
+          
+     
+        
+          <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Flower/Tuberose.webp" alt="">
+          <div class="gcdetails">
+            <h2><span>Tuberose</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Tuberose.html" class="gcread-more">Read more </a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      </div>
+        
+      <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Flower/Marigold.jpeg" alt="">
+          <div class="gcdetails">
+            <h2><span>Marigold</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Marigold.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      </div>
+
+      </div>
+
+      <div class="gcrow">
+        <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Flower/gladiolus.webp" alt="">
+          <div class="gcdetails">
+            <h2><span>Gladiolus</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Gladiolus.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      
+      </div>
+ 
+
+      <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Flower/Gerbera.jpg" alt="">
+          <div class="gcdetails">
+            <h2><span>Gerbera</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Gerbera.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      
+      </div>
+
+      <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Flower/Orchid.jpg" alt="">
+          <div class="gcdetails">
+            <h2><span>Orchid</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Orchid.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      
+      </div>
+      
+
+      </div>
+
+    </div>
+        </div>
+
+        <div class="Spice text">
+                                                  <!---Grain Dieases-->
+    <div class="graincrops">
+
+      <div class="gcrow">
+
+        <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Spice/pepper.jpg" alt="">
+          
+          <div class="gcdetails">
+            <h2><span>Pepper</span></h2>
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Pepper.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+              </div>
+              
+            </div>
+
+          </div> 
+           </div>
+           <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+           
+          </div>
+         
+          
+           
+          
+     
+        
+          <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Spice/Onion.jpg" alt="">
+          <div class="gcdetails">
+            <h2><span>Onion</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Onion.html" class="gcread-more">Read more </a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      </div>
+        
+      <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Spice/garlic.jpeg" alt="">
+          <div class="gcdetails">
+            <h2><span>Garlic</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Garlic.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      </div>
+
+      </div>
+
+      <div class="gcrow">
+        <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Spice/Ginger.jpg" alt="">
+          <div class="gcdetails">
+            <h2><span>Ginger</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Ganger.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      
+      </div>
+ 
+
+      <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Spice/Turmeric.png.jpg" alt="">
+          <div class="gcdetails">
+            <h2><span>Turmeric</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Turmeric.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      
+      </div>
+
+      <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Spice/Coriander.png" alt="">
+          <div class="gcdetails">
+            <h2><span>Coriander</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Coriander.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      
+      </div>
+      
+
+      </div>
+
+    </div>
+        </div>
+
+        <div class="Spring text">
+                           <!---Grain Dieases-->
+    <div class="graincrops">
+
+      <div class="gcrow">
+
+        <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Spring/henna.jpg" alt="">
+          
+          <div class="gcdetails">
+            <h2><span>Henna</span></h2>
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Henna.html" class="gcread-more">Read more</a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+              </div>
+              
+            </div>
+
+          </div> 
+           </div>
+           <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+           
+          </div>
+   
+          <div class="twopart">
+        <div class="gcimage">
+          <img src="./Crops-Diseases/Crops-Diseases-img/Spring/croton.jpg" alt="">
+          <div class="gcdetails">
+            <h2><span>Crotons</span></h2>
+            
+            <div class="gcmore">
+              <a href="./Crops-Diseases/Crotons.html" class="gcread-more">Read more </a>
+              <div class="gcicon-links">
+                <a href="#"><i class="fas fa-thumbs-up"></i></a>
+                <a href="#"><i class='fa fa-share-alt'></i></a>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="part"><p>See about various rice diseases, symptoms and remedies.</p></div>
+      </div>
+        
+     
+      
+
+      </div>
+
+    </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+   
+
+<!----footer-->
+<footer>
+  <div class="content" data-aos="fade-up">
+    <div class="top">
+      <div class="logo-details">
+        <i class="fab fa-envira"></i>
+        <span class="logo_name">Agro Development Techonology</span>
+      </div>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="link-boxes">
+      <ul class="box">
+        <li class="link_name">Agro.</li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Get started</a></li>
+      </ul>
+      <ul class="box">
+        <li class="link_name">Services</li>
+        <li><a href="#">Crops Dieases</a></li>
+        <li><a href="#">Expart Panel</a></li>
+        <li><a href="#">Agriculture Product</a></li>
+        <li><a href="#">Others</a></li>
+      </ul>
+      <ul class="box">
+        <li class="link_name">Buy Product</li>
+        <li><a href="#">Convenience</a></li>
+        <li><a href="#">Saves time</a></li>
+        <li><a href="#">Saves Money</a></li>
+        <li><a href="#">Online tracking</a></li>
+      </ul>
+      <ul class="box">
+        <li class="link_name">Bank Loan</li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Eligibility</a></li>
+        <li><a href="#">Required Documents</a></li>
+        <li><a href="#">Security</a></li>
+      </ul>
+      <ul class="box input-box">
+        <li class="link_name">Email</li>
+        <li><input type="text" placeholder="Enter your email"></li>
+        <li><input type="button" value="Sent"></li>
+      </ul>
+    </div>
+  </div>
+  <div class="bottom-details">
+    <div class="bottom_text">
+      <span class="copyright_text">Copyright © 2022 <a href="#">Agro Development Techonology</a>All rights reserved</span>
+      <span class="policy_terms">
+        <a href="#">Privacy policy</a>
+        <a href="#">Terms & condition</a>
+      </span>
+    </div>
+  </div>
+</footer>
+  <script type="text/javascript">
+    //jquery for toggle dropdown menus
+    $(document).ready(function(){
+      //toggle sub-menus
+      $(".sub-btn").click(function(){
+        $(this).next(".sub-menu").slideToggle();
+      });
+
+      //toggle more-menus
+      $(".more-btn").click(function(){
+        $(this).next(".more-menu").slideToggle();
+      });
+    });
+
+    //javascript for the responsive navigation menu
+    var menu = document.querySelector(".menu");
+    var menuBtn = document.querySelector(".menu-btn");
+    var closeBtn = document.querySelector(".close-btn");
+
+    menuBtn.addEventListener("click", () => {
+      menu.classList.add("active");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      menu.classList.remove("active");
+    });
+
+    //javascript for the navigation bar effects on scroll
+    window.addEventListener("scroll", function(){
+      var header = document.querySelector("header");
+      header.classList.toggle("sticky", window.scrollY > 0);
+    });
+
+
+    //Search Box
+    searchToggle = document.querySelector(".searchToggle"),
+
+// js code to toggle search box
+        searchToggle.addEventListener("click" , () =>{
+        searchToggle.classList.toggle("active");
+      });
+
+// header sticky
+var nav = document.getElementById("header");
+ 
+  window.onscroll = function(){
+    if (window.pageYOffset >= header.offsetTop) {
+    header.classList.add("fixed")
+  } else {
+    header.classList.remove("fixed");
+  }
+  }
+    </script>
+
+</body>
+</html>
