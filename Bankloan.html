@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Loan</title>
+    <link rel="shortcut icon" href="./image/logo3.png" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
+}
+
+body{
+
+	font-family: "Poppins", sans-serif;
+background-image: url(./image/field.jpg);
+background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+
+}
+
+
+/*============Top header============*/
+
+
+.double_header{
+  background: rgba(232, 250, 237, 0.9);
+ width: 100%;
+height: 70px;
+ display: flex;
+  align-items: center;
+  justify-content: space-around;
+overflow: hidden;
+
+
+
+}
+
+
+.phone_email{
+ 
+display: flex;
+margin: 0 10px;
+}
+
+
+
+
+
+/*----Register-----*/
+.bn13 {
+  background-image: linear-gradient(45deg, #00af6c 0%, #00eb91 51%, #00b46f 100%);
+    color: rgb(255, 255, 255);
+    padding: 0.5em 1.2em;
+    margin: 0 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.4s ease;
+    border-radius: 5px;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    background-size: 200% auto;
+}
+
+.bn13:hover {
+  background: linear-gradient( #1a9465, #00c076);
+  transform: scale(0.90);
+}
+
+@keyframes bn13bouncy {
+  0% {
+    top: 0em;
+  }
+  40% {
+    top: 0em;
+  }
+  43% {
+    top: -0.9em;
+  }
+  46% {
+    top: 0em;
+  }
+  48% {
+    top: -0.4em;
+  }
+  50% {
+    top: 0em;
+  }
+  100% {
+    top: 0em;
+  }
+}
+
+@media (max-width: 550px){
+    .bn13{
+      padding: 0.9em 2em;
+    margin: 0px;
+    font-size: 13px;
+    font-weight: 300;
+       }
+       .phone_email{
+           display: none;
+     
+       }
+      }
+/*----Social Meadi----*/
+
+.media-social{
+  display: flex;
+}
+.media-social a{
+  height: 30px;
+  width: 30px;
+  margin: 0 8px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 32px;
+  color: #fff;
+  font-size: 17px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+ .media-social a:nth-child(1){
+  background: #4267B2;
+}
+ .media-social a:nth-child(1):hover{
+  color: #4267B2;
+  background: #fff;
+  transform: scale(1.3);
+}
+ .media-social a:nth-child(2){
+  background: #1DA1F2;
+}
+ .media-social a:nth-child(2):hover{
+  color: #1DA1F2;
+  background: #fff;
+  transform: scale(1.3);
+}
+ .media-social a:nth-child(3){
+  background: #E1306C;
+}
+ .media-social a:nth-child(3):hover{
+  color: #E1306C;
+  background: #fff;
+  transform: scale(1.3);
+}
+.media-social a:nth-child(4){
+  background: #0077B5;
+}
+ .media-social a:nth-child(4):hover{
+  color: #0077B5;
+  background: #fff;
+  transform: scale(1.3);
+}
+.media-social a:nth-child(5){
+  background: #FF0000;
+}
+ .media-social a:nth-child(5):hover{
+  color: #FF0000;
+  background: #fff;
+  transform: scale(1.3);
+}
+
+@media (max-width: 550px){
+    .media-social a{
+      height: 30px;
+      width: 30px;
+      margin: 0 2px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 32px;
+      color: #fff;
+      font-size: 15px;
+      text-decoration: none;
+      transition: all 0.4s ease;
+    }
+  }
+
+/*============dowen header============*/
+header{
+  z-index: 999;
+  position: fixed;
+
+  left: 0;
+  width: 100%;
+ 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007045;
+  backdrop-filter: blur(8px);
+  padding:5px 60px;
+  transition: 0.6s;
+
+}
+ .logo img{
+width: 80px;
+height: 70px;
+margin-top: -40px;
+position: absolute; 
+filter: drop-shadow(10px 10px 10px  rgba(41, 40, 40, 0.5));
+
+}
+
+
+
+
+header .navigation{
+  position: relative;
+  line-height: 75px;
+  transition: 0.6s;
+  transition-property: line-height;
+}
+
+header.sticky .navigation{
+  line-height: 60px;
+ 
+
+}
+
+header.sticky{
+  position: fixed;
+  top: 0px;
+}
+
+header .navigation .menu{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  user-select: none;
+}
+
+.menu-item > a{
+  color: #fff;
+  font-size: 1em;
+  text-decoration: none;
+  margin: 20px;
+  padding: 25px 0;
+
+}
+
+.menu-item > a:hover{
+  color: rgb(0, 255, 106);
+  transition: 0.3s;
+}
+
+.menu-item .sub-menu{
+  position: absolute;
+  background: #292c33;
+  top: 79px;
+  line-height: 40px;
+  list-style: none;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
+  pointer-events: none;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: 0.4s;
+  transition-property: transform, opacity;
+}
+
+header.sticky .menu-item .sub-menu,
+.menu-item .mega-box{
+  top: 65px;
+}
+
+
+.menu-item:hover .sub-menu{
+  pointer-events: all;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.menu-item .sub-menu .sub-item{
+  position: relative;
+  padding: 7px 0;
+  cursor: pointer;
+  box-shadow: inset 0px -30px 5px -30px rgba(255, 255, 255, 0.2);
+}
+
+.menu-item .sub-menu .sub-item a{
+  color: #fff;
+  font-size: 1em;
+  text-decoration: none;
+  padding: 15px 30px;
+}
+
+.menu-item .sub-menu .sub-item:hover{
+  background: #01ca6d;
+}
+
+.menu-item .sub-menu .sub-item:last-child:hover{
+  border-radius: 0 0 8px 8px;
+}
+
+.menu-btn{
+  display: none;
+}
+
+
+/*----Searchbar---*/
+
+.searchBox{
+  display: flex;
+  align-items: center;
+}
+
+
+.searchToggle{
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+}
+
+
+.searchToggle i{
+  position: absolute;
+  color: #ffff;
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+
+.searchToggle i.cancel{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.searchToggle.active i.cancel{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.searchToggle.active i.search{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.searchBox{
+  position: relative;
+}
+
+.searchBox .search-field{
+  position: absolute;
+  bottom: -85px;
+  right: 5px;
+  height: 50px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 3px;
+  border-radius: 6px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.searchToggle.active ~ .search-field{
+  bottom: -74px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.search-field::before{
+  content: '';
+  position: absolute;
+  right: 14px;
+  top: -4px;
+  height: 12px;
+  width: 12px;
+  background-color: #ff9900;
+  transform: rotate(-45deg);
+  z-index: -1;
+}
+
+.search-field input{
+  height: 100%;
+  width: 100%;
+  padding: 0 45px 0 15px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #110101;
+  background-color: #ffff;
+}
+
+
+
+.search-field i{
+  position: absolute;
+  color: #b1b1b1;
+  right: 15px; 
+  font-size: 22px;
+  cursor: pointer;
+
+}
+
+/*---Megabox-----*/
+
+.menu-item:hover .mega-box{
+  opacity: 1;
+  top: 79px;
+  visibility: visible;
+  position: absolute;
+  pointer-events: all;
+
+}
+
+
+
+.mega-box{
+  position: absolute;
+
+  width: 80%;
+
+  opacity: 0;
+  visibility: hidden;
+
+
+
+
+
+
+}
+.mega-box .content{
+  background: #242526;
+  padding: 10px 10px;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+  border-radius: 0 0 8px 8px;
+}
+.mega-box .content .row{
+  width: calc(25% - 00px);
+  line-height: 30px;
+
+}
+.content .row img{
+  width: 80%;
+  height: 90%;
+  border-radius: 50%;
+  object-fit: cover;
+
+
+}
+.content .row p{
+  color: rgb(0, 255, 106);
+  font-size: 20px;
+  font-weight: 500;
+  
+}
+.content .row .mega-links{
+  margin-left: auto;
+  border-left: 1px solid rgba(255,255,255,0.09);
+}
+.row .mega-links li{
+  padding: 0 20px;
+  list-style: none;
+
+ 
+
+}
+.row .mega-links li a{
+
+  
+  color: #ffffff;
+  font-size: 17px;
+  display: block;
+  text-decoration: none;
+}
+.row .mega-links li a:hover{
+  color: rgb(0, 255, 106);
+}
+
+
+
+@media (max-width: 1200px){
+  header .navigation .menu{
+    position: fixed;
+    display: block;
+    background: #23252b;
+    min-width: 350px;
+    height: 100vh;
+    top: 0;
+    right: -100%;
+    padding: 90px 50px;
+    visibility: hidden;
+    overflow-y: auto;
+    transition: 0.5s;
+    transition-property: right, visibility;
+  }
+
+  header.sticky .navigation{
+    line-height: 75px;
+  }
+
+  header .navigation .menu.active{
+    right: 0;
+    visibility: visible;
+  }
+
+  .menu-item{
+    position: relative;
+  }
+
+  .menu-item .sub-menu{
+    opacity: 1;
+    position: relative;
+    top: 0;
+    transform: translateX(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    display: none;
+  }
+
+.search-field{
+ left: -19px;
+}
+
+  header.sticky .menu-item .sub-menu{
+    top: 0;
+  }
+
+  .menu-item:hover .sub-menu{
+    transform: translateX(10px);
+  }
+
+  .menu-item .sub-menu .sub-item{
+    box-shadow: none;
+  }
+
+  .menu-item .sub-menu .sub-item:hover{
+    background: none;
+  }
+
+  .menu-item .sub-menu .sub-item a:hover{
+    color: rgb(0, 255, 106);
+    transition: 0.3s;
+  }
+
+
+
+  .close-btn{
+    position: absolute;
+    background: url(./image/close.png)no-repeat;
+    width: 40px;
+    height: 40px;
+    background-size: 25px;
+    background-position: center;
+    top: 0;
+    left: 0;
+    margin: 25px;
+    cursor: pointer;
+  }
+
+  .menu-btn{
+    background: url(./image/menu.png)no-repeat;
+    width: 40px;
+    height: 40px;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+    display: block;
+  }
+
+  header{
+    padding: 15px 20px;
+  }
+
+  header.sticky{
+    padding: 10px 20px;
+  }
+  #showMega:checked ~ .mega-box{
+    max-height: 100%;
+  }
+  .mega-box{
+
+    top: 65px;
+    opacity: 1;
+    visibility: visible;
+    padding: 0 20px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .mega-box .content{
+    box-shadow: none;
+    flex-direction: column;
+    padding: 20px 20px 0 20px;
+  }
+  .mega-box .content .row{
+    width: 100%;
+    margin-bottom: 15px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .mega-box .content .row:nth-child(1),
+  .mega-box .content .row:nth-child(2){
+    border-top: 0px;
+  }
+  
+  .row .mega-links li{
+    margin: 0;
+  }
+
+
+}
+
+
+
+
+/*-----Agro loan---*/
+
+.container{
+  width: 500px;
+  height: 630px;
+  /* height: 300px; */
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+background-color: rgb(255, 255, 255);
+ position: relative;
+  border: 10px solid #dddddd4f;
+ top: 200px;
+ left: 150px;
+}
+
+
+.heading{
+  text-align: center;
+  font-size: 40px;    
+font-weight: 700;
+font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color:rgb(0, 151, 58);
+margin: 30px;
+}
+/* Style for all input containers */
+.input-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 30px;
+}
+.input-container label{
+  font-size: 16px;
+  color:rgb(63, 71, 65);
+  font-weight: 700;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.input-container input{
+  font-size: larger;
+  border:none;
+  box-shadow: 0px 0px 2px 1px rgba(152, 145, 145, 0.568);
+  padding: 4px 10px;
+  border-radius: 50px; 
+  outline: none;
+  width: 50%;
+}
+.input-container input:hover{
+  box-shadow: 0px 0px 2px 1px rgb(37, 34, 34);
+}
+
+/* submit button style */
+.submit-container{
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+#calculate{    
+
+  font-size: larger;
+  background-color: rgb(53, 182, 81);
+  border-radius: 50px;
+  padding: 5px 12px;
+  min-height: 20px;
+    min-width: 100px;
+
+  color: white;
+  border:none;
+  outline: none;
+  box-shadow: 2px 2px 2px rgba(55, 52, 52, 0.233);
+  transition: 0.4s;
+  cursor: pointer;
+}
+#calculate:active{
+  box-shadow: none;
+  font-size:large;
+}
+
+/*---toaster----*/
+.toast{
+    position: absolute;
+    top: 170px;
+    right: 30px;
+    border-radius: 12px;
+    background: #fff;
+    padding: 20px 35px 20px 25px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    border-left: 6px solid #00c076;
+    overflow: hidden;
+   display: none;
+    transform: translateX(calc(100% + 30px));
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+.toast.active{
+    transform: translateX(0%);
+   display: block;
+}
+
+.toast .toast-content{
+    display: flex;
+    align-items: center;
+}
+
+.toast-content .check{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    background-color: #00c076;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 50%;
+    
+}
+
+.toast-content .message{
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.message .text{
+    font-size: 15px;
+    font-weight: 400;;
+    color: #666666;
+    font-family: 'Poppins', sans-serif;
+}
+
+.message .text.text-1{
+    font-weight: 600;
+    color: #333;
+}
+
+.toast .close{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    padding: 5px;
+    cursor: pointer;
+    opacity: 0.7;
+    
+}
+
+.toast .close:hover{
+    opacity: 1;
+}
+
+.toast .progress{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: #ddd;
+}
+
+.toast .progress:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #00c076;
+}
+
+.progress.active:before{
+    animation: progress 5s linear forwards;
+}
+
+@keyframes progress {
+    100%{
+        right: 100%;
+    }
+}
+
+
+/* Button*/
+
+.btn57{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.button-57 {
+  position: relative;
+  overflow: hidden;
+  line-height: 40px;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  font-size: 20px;
+  font-weight: 300;
+    text-align: center;
+border-radius: 50px;
+  padding: 8px 24px;
+  min-height: 50px;
+    min-width: 200px;
+  text-decoration: none;
+  cursor: pointer;
+  background: #008738;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+ 
+ 
+
+
+}
+
+.button-57 span:first-child {
+  position: relative;
+  transition: color 0.6s cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+
+
+}
+
+.button-57 span:last-child {
+  color: white;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transition: all 0.6s cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 20px;
+
+}
+
+.button-57:after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f44336;
+  transform-origin: bottom center;
+  transition: transform 0.6s cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9deg) scaleY(0);
+  z-index: 50;
+}
+
+.button-57:hover:after {
+  transform-origin: bottom center;
+  transform: skewY(0deg) scaleY(2);
+}
+
+.button-57:hover span:last-child {
+  transform: translateX(-50%) translateY(-100%);
+  opacity: 1;
+  transition: all 0.6s cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+.toast.active ~ .btn57{
+    pointer-events: none;
+}
+
+.note{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.note_text {
+  position: relative;
+  overflow: hidden;
+  line-height: 19px;
+  color: #1c1c24a6;
+  font-size: 11px;
+  font-weight: 300;
+  text-align: center;
+  padding: 8px 15px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.note_text span{
+  font-weight: 900;
+  font-size: 13px;
+}
+.output{
+  margin: 50px 10px 10px 10px;    
+  /* box-shadow: 0px 0px 5px rgb(51, 48, 48); */
+  display: flex;
+  flex-direction: column;
+
+
+}
+.output p{
+  font-size: 16px;
+  border-radius: 4px;
+  padding: 4px;
+  margin:4px;    
+  width: 100%;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color:rgb(62, 58, 58);
+  font-weight: 550;
+  
+
+}
+.output p span{
+  float: right;
+  word-wrap: break-word;
+  color: rgb(10, 158, 77);
+  font-weight: bolder;
+  font-size: larger;
+}
+
+
+
+
+@media (max-width: 550px){
+  .container{
+    width: 370px;
+    height: 0%;
+    margin: 150px 10px 20px 20px;
+  left:-20px;
+}
+
+      }
+
+
+
+/*----footer-----*/
+footer{
+  position: relative;
+  background: #007045;
+  width: 100%;
+ margin-top: 125vh;
+  
+}
+footer:hover{
+  background: linear-gradient(to right, #005c39 0%, #005f33 100%);
+}
+
+footer::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 100px;
+  height: 1px;
+  width: 100%;
+  background: #AFAFB6;
+}
+footer .content{
+  max-width: 100%;
+  margin: auto;
+  padding: 30px 40px 40px 40px;
+}
+footer .content .top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.content .top .logo-details{
+  color: #fff;
+  font-size: 30px;
+}
+.content .top .media-icons{
+  display: flex;
+}
+.content .top .media-icons a{
+  height: 40px;
+  width: 40px;
+  margin: 0 8px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  font-size: 17px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+.top .media-icons a:nth-child(1){
+  background: #4267B2;
+}
+.top .media-icons a:nth-child(1):hover{
+  color: #4267B2;
+  background: #fff;
+}
+.top .media-icons a:nth-child(2){
+  background: #1DA1F2;
+}
+.top .media-icons a:nth-child(2):hover{
+  color: #1DA1F2;
+  background: #fff;
+}
+.top .media-icons a:nth-child(3){
+  background: #E1306C;
+}
+.top .media-icons a:nth-child(3):hover{
+  color: #E1306C;
+  background: #fff;
+}
+.top .media-icons a:nth-child(4){
+  background: #0077B5;
+}
+.top .media-icons a:nth-child(4):hover{
+  color: #0077B5;
+  background: #fff;
+}
+.top .media-icons a:nth-child(5){
+  background: #FF0000;
+}
+.top .media-icons a:nth-child(5):hover{
+  color: #FF0000;
+  background: #fff;
+}
+footer .content .link-boxes{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .content .link-boxes .box{
+  width: calc(100% / 5 - 10px);
+}
+.content .link-boxes .box .link_name{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  position: relative;
+}
+.link-boxes .box .link_name::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 35px;
+  background: #fff;
+}
+.content .link-boxes .box li{
+  margin: 6px 0;
+  list-style: none;
+}
+.content .link-boxes .box li a{
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: all 0.4s ease
+}
+.content .link-boxes .box li a:hover{
+  opacity: 1;
+  text-decoration: underline;
+}
+.content .link-boxes .input-box{
+  margin-right: 55px;
+}
+.link-boxes .input-box input{
+  height: 40px;
+  width: calc(100% + 55px);
+  outline: none;
+  border: 1px solid #ffffff;
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 0 15px;
+  font-size: 15px;
+  color: rgb(31 36 72 / 76%);
+  margin-top: 5px;
+}
+.link-boxes .input-box input::placeholder{
+  color: #353535a4;
+  font-size: 16px;
+}
+.link-boxes .input-box input[type="button"]{
+  background: #fff;
+
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 4px 0;
+
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.input-box input[type="button"]:hover{
+  background: #ff3d0d;
+  color: white;
+}
+footer .bottom-details{
+  width: 100%;
+  background: #003f2c;
+}
+footer .bottom-details .bottom_text{
+  max-width: 1250px;
+  margin: auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-details .bottom_text span,
+.bottom-details .bottom_text a{
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+  opacity: 0.8;
+  text-decoration: none;
+}
+.bottom-details .bottom_text a:hover{
+  opacity: 1;
+  text-decoration: underline;
+}
+.bottom-details .bottom_text a{
+  margin-right: 10px;
+}
+@media (max-width: 900px) {
+  footer .content .link-boxes{
+    flex-wrap: wrap;
+  }
+  footer .content .link-boxes .input-box{
+    width: 40%;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 700px){
+  footer{
+    position: relative;
+  }
+  .content .top .logo-details{
+    font-size: 26px;
+  }
+  .content .top .media-icons a{
+    height: 35px;
+    width: 35px;
+    font-size: 14px;
+    line-height: 35px;
+  }
+  footer .content .link-boxes .box{
+    width: calc(100% / 3 - 10px);
+  }
+  footer .content .link-boxes .input-box{
+    width: 60%;
+  }
+  .bottom-details .bottom_text span,
+  .bottom-details .bottom_text a{
+    font-size: 12px;
+  }
+}
+@media (max-width: 520px){
+  footer::before{
+    top: 145px;
+  }
+  footer .content .top{
+    flex-direction: column;
+  }
+  .content .top .media-icons{
+    margin-top: 16px;
+  }
+  footer .content .link-boxes .box{
+    width: calc(100% / 2 - 10px);
+  }
+  footer .content .link-boxes .input-box{
+    width: 100%;
+  }
+}
+
+
+
+  </style>
+  
+  </head>
+  <body>
+
+<!----Top header-->
+
+<div class="double_header" id="top">
+  <div class="media-social">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+
+
+    <div class="phone_email">
+    <span class="phone">
+      <i class="fas fa-phone-alt"></i>
+      +98976546789
+    </span>
+    <span class="phone_email">|</span>
+    <span class="email">
+      <i class="fa fa-envelope"></i>
+         agrobd@gmail.com
+    </span>
+    </div>
+
+    <div class="log_register_buttons">
+    
+ 
+    <a href="http://product.agrodevbd.com/user/login" class="bn13"> Log In\ Register</a>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+ <!-----Dowen header-->
+    <header id="header">
+             <div class="logo"><img src="./image/logo3.png" href="index.html"></div>
+             
+      <div class="navigation">
+        <ul class="menu">
+          <div class="close-btn"></div>
+          <li class="menu-item"><a href="../index.html">Home</a></li>
+         
+         
+          <li class="menu-item">
+              <a href="../Crops_Diseases.html" class="sub-btn">Crops Diseases <i class="fas fa-angle-down"></i></a>
+              <ul class="sub-menu">
+                <li class="sub-item"><a href="#">Grain crops</a></li>
+                  <li class="sub-item"><a href="#">Fiber crops</a></li>
+                  <li class="sub-item"><a href="#">Pulse crop</a></li>
+                  <li class="sub-item"><a href="#">Oil crops</a></li>
+                  <li class="sub-item"><a href="#">Cash crops</a></li>
+                  <li class="sub-item"><a href="#">Vegetable crops</a></li>
+                  <li class="sub-item"><a href="#">Fruit crops</a></li>
+                  <li class="sub-item"><a href="#">Flower crops</a></li>
+                  <li class="sub-item"><a href="#">Spice crops</a></li>
+                  <li class="sub-item"><a href="#">Spring crops</a></li>
+              </ul>
+
+
+            </li>
+            <li class="menu-item">
+              <a class="sub-btn" href="#">Problem/Solution <i class="fas fa-angle-down"></i></a>
+              <ul class="sub-menu">
+                <li class="sub-item"><a href="../Text Message/index.html">Text Message</a></li>
+                <li class="sub-item"><a href="https://mahmuduldata.github.io/Plant-Disease-Classifier-Web-Application/?fbclid=IwAR02AuUaYmlxdixsdZTf9JGBbSYSQ3bdnoEtWjY1R7hUkyAeGTv_LHw4BhA">Image Upload</a></li>
+                <li class="sub-item"><a href="../Voice call/index.html">Voice Call</a></li>
+                <li class="sub-item"><a href="../Video Call/index.html">Video Call</a></li>
+                
+              </ul>
+            </li>
+
+            <li class="menu-item">
+              <a class="sub-btn" href="http://product.agrodevbd.com/">Buy Product</a>
+              
+            </li>
+          <li class="menu-item"><a href="./Bankloan.html">Bank Loan</a></li>
+          <li class="menu-item"><a href="https://product.agrodevbd.com/blog">Blog</a></li>
+          <li class="menu-item"><a href="https://product.agrodevbd.com/about">About</a></li>
+          <li class="menu-item"><a href="https://product.agrodevbd.com/contact">Contact</a></li>
+          <div class="searchBox">
+            <div class="searchToggle">
+             <i class='fa fa-close cancel'></i>
+             <i class='fa fa-search search'></i>
+            </div>
+  
+             <div class="search-field">
+                 <input type="text" placeholder="Search...">
+                 <i class='fa fa-search'></i>
+             </div>
+         </div>
+        </ul>
+      </div>
+      <div class="menu-btn"></div>
+    </header>
+
+    <!----agro loan----->
+    <form class="container">
+        <p class="heading">Agro Loan</p>
+        <div class="input-container">
+            <label for="amount">Loan Amount(Tk)</label>
+            <input type="number" id="amount" required>            
+        </div>
+        <div class="input-container">
+            <label for="interest">Interest Rate(%)</label>
+            <input type="number" id="interest" step="0.01" required>            
+        </div>
+        <div class="input-container loan-tenure-container">
+            <label for="loanTenure">Loan Period(Years)</label>
+            <input type="number" id="loanTenure" required>            
+        </div>
+        <div class="submit-container">
+            <input type="submit" value="Click" id="calculate">            
+        </div>
+        
+        <div class="output">
+            <p >Monthly Instalment (Tk.)                           <span id="emi"      ></span></p>
+            <p >Total Interest (Tk.)            <span id="totalInterest"></span></p>
+            <p >Total Payment (Tk.)<span id="totalPayment"></span> </p>
+            
+        </div>
+        
+
+
+
+
+
+    <div class="btn57">
+        <a href="#" class="button-57" role="button"><span class="text"> Apply Now </span><span> Confirm.. </span></a>
+
+      </div>
+        <div class="note">
+          <span class="note_text"><span>Note: </span>Monthly Repayment and Illustrative Interest Rate displayed here is for reference only and is subject to credit approval.</span>
+        </div>
+       
+    </form>
+    <div class="toast">
+        <div class="toast-content">
+            <i class="fas fa-solid fa-check check"></i>
+
+            <div class="message">
+                <span class="text text-1">Success</span>
+                <span class="text text-2">We will cotract you as soon as possible 💬.</span>
+            </div>
+        </div>
+        <i class="fa-solid fa-xmark close"></i>
+
+        <div class="progress"></div>
+    </div>
+   
+    <!----footer-->
+<footer>
+  <div class="content" data-aos="fade-up">
+    <div class="top">
+      <div class="logo-details">
+
+        <span class="logo_name">Agro Development Techonology</span>
+      </div>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="link-boxes">
+      <ul class="box">
+        <li class="link_name">Agro.</li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Get started</a></li>
+      </ul>
+      <ul class="box">
+        <li class="link_name">Services</li>
+        <li><a href="#">Crops Dieases</a></li>
+        <li><a href="#">Expart Panel</a></li>
+        <li><a href="#">Agriculture Product</a></li>
+        <li><a href="#">Others</a></li>
+      </ul>
+      <ul class="box">
+        <li class="link_name">Buy Product</li>
+        <li><a href="#">Convenience</a></li>
+        <li><a href="#">Saves time</a></li>
+        <li><a href="#">Saves Money</a></li>
+        <li><a href="#">Online tracking</a></li>
+      </ul>
+      <ul class="box">
+        <li class="link_name">Bank Loan</li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Eligibility</a></li>
+        <li><a href="#">Required Documents</a></li>
+        <li><a href="#">Security</a></li>
+      </ul>
+      <ul class="box input-box">
+        <li class="link_name">Email</li>
+        <li><input type="text" placeholder="Enter your email"></li>
+        <li><input type="button" value="Sent"></li>
+      </ul>
+    </div>
+  </div>
+  <div class="bottom-details">
+    <div class="bottom_text">
+      <span class="copyright_text">Copyright © 2022 <a href="#">Agro Development Techonology</a>All rights reserved</span>
+      <span class="policy_terms">
+        <a href="#">Privacy policy</a>
+        <a href="#">Terms & condition</a>
+      </span>
+    </div>
+  </div>
+</footer>
+<script>
+  
+//jquery for toggle dropdown menus
+$(document).ready(function(){
+    //toggle sub-menus
+    $(".sub-btn").click(function(){
+      $(this).next(".sub-menu").slideToggle();
+    });
+
+    //toggle more-menus
+    $(".more-btn").click(function(){
+      $(this).next(".more-menu").slideToggle();
+    });
+  });
+
+  //javascript for the responsive navigation menu
+  var menu = document.querySelector(".menu");
+  var menuBtn = document.querySelector(".menu-btn");
+  var closeBtn = document.querySelector(".close-btn");
+
+  menuBtn.addEventListener("click", () => {
+    menu.classList.add("active");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    menu.classList.remove("active");
+  });
+
+  //javascript for the navigation bar effects on scroll
+  window.addEventListener("scroll", function(){
+    var header = document.querySelector("header");
+    header.classList.toggle("sticky", window.scrollY > 0);
+  });
+
+
+  //Search Box
+  searchToggle = document.querySelector(".searchToggle"),
+
+// js code to toggle search box
+      searchToggle.addEventListener("click" , () =>{
+      searchToggle.classList.toggle("active");
+    });
+
+// header sticky
+var nav = document.getElementById("header");
+
+window.onscroll = function(){
+  if (window.pageYOffset >= header.offsetTop) {
+  header.classList.add("fixed")
+} else {
+  header.classList.remove("fixed");
+}
+}
+// Agro Loan
+
+let loanAmount = document.getElementById("amount");
+let interestRate=document.getElementById("interest");
+let loanDuration = document.getElementById("loanTenure");
+let submit = document.getElementById("calculate");
+
+submit.addEventListener('click',(e)=>{
+    e.preventDefault();
+    calculateEMI();
+})
+
+function calculateEMI(){
+    // First calculate total number of months in loan tenure if selected year
+   
+ 
+    let noOfMonths=0;
+
+            noOfMonths=loanDuration.value * 12 ;
+        
+
+        let r = parseFloat(interestRate.value)/12/100;
+        let P = loanAmount.value;
+        let n = noOfMonths;
+        //formula EMI= (P * r * (1 + r)^n ) / ((1+r)^n - 1)
+        let EMI = (P*r* Math.pow((1+r),n)) / (Math.pow((1+r),n)-1);
+        let totalInterest =(EMI * n) - P;
+        let totalPayment  = totalInterest + parseFloat(P);
+        document.getElementById("emi").innerText = Math.round(EMI);
+        document.getElementById("totalInterest").innerText= Math.round(totalInterest);
+        document.getElementById("totalPayment").innerText= Math.round(totalPayment);
+
+
+        const button = document.querySelector(".btn57"),
+      toast = document.querySelector(".toast")
+      closeIcon = document.querySelector(".close"),
+      progress = document.querySelector(".progress");
+
+      let timer1, timer2;
+
+      button.addEventListener("click", () => {
+        toast.classList.add("active");
+        progress.classList.add("active");
+
+        timer1 = setTimeout(() => {
+            toast.classList.remove("active");
+        }, 5000); //1s = 1000 milliseconds
+
+        timer2 = setTimeout(() => {
+          progress.classList.remove("active");
+        }, 5300);
+      });
+      
+      closeIcon.addEventListener("click", () => {
+        toast.classList.remove("active");
+        
+        setTimeout(() => {
+          progress.classList.remove("active");
+        }, 300);
+
+        clearTimeout(timer1);
+        clearTimeout(timer2);
+      });  
+}
+</script>
+  </body>
+</html>
